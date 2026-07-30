@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAGSCAN — Sign In</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/globals.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-page__hero-glow"></div>
+    <div class="auth-page__container">
+      <!-- Logo -->
+      <div class="auth-page__logo-block">
+        <div class="auth-page__logo-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="4" y="8" width="40" height="32" rx="4" stroke="#00ff88" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="24" r="8" stroke="#00ff88" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="24" r="3" fill="#00ff88"/>
+            <line x1="4" y1="14" x2="44" y2="14" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+            <circle cx="8" cy="11" r="1" fill="#00ff88" opacity="0.6"/>
+            <circle cx="12" cy="11" r="1" fill="#00ff88" opacity="0.6"/>
+          </svg>
+        </div>
+        <h1 class="auth-page__logo-text">TAGSCAN</h1>
+        <p class="auth-page__tagline">IT Asset Disposition Scanner</p>
+      </div>
+
+      <!-- Auth Card -->
+      <div class="glass-card auth-card">
+        <!-- Tabs -->
+        <div class="auth-card__tabs">
+          <button class="auth-card__tab auth-card__tab--active" data-tab="signin" type="button">Sign In</button>
+          <button class="auth-card__tab" data-tab="signup" type="button">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form class="auth-card__form" id="signin-form" novalidate>
+          <div class="form-field">
+            <label class="form-field__label" for="signin-email">EMAIL</label>
+            <div class="form-field__input-wrap">
+              <svg class="form-field__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M1 5l7 4 7-4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+              <input class="form-field__input form-field__input--with-icon" type="email" id="signin-email" placeholder="you@company.com" autocomplete="email" required>
+            </div>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="signin-password">PASSWORD</label>
+            <div class="form-field__input-wrap">
+              <svg class="form-field__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="10" height="7" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+              <input class="form-field__input form-field__input--with-icon" type="password" id="signin-password" placeholder="Enter your password" autocomplete="current-password" required>
+            </div>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+
+          <div class="form-field__global-error" id="signin-global-error" role="alert"></div>
+
+          <button class="btn btn--primary btn--lg btn--full" type="submit">
+            <span class="btn__text">Sign In</span>
+            <span class="btn__loader" aria-hidden="true">
+              <span class="dot-pulse"></span>
+            </span>
+          </button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form class="auth-card__form auth-card__form--hidden" id="signup-form" novalidate>
+          <div class="form-field">
+            <label class="form-field__label" for="signup-email">EMAIL</label>
+            <div class="form-field__input-wrap">
+              <svg class="form-field__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M1 5l7 4 7-4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+              <input class="form-field__input form-field__input--with-icon" type="email" id="signup-email" placeholder="you@company.com" autocomplete="email" required>
+            </div>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="signup-password">PASSWORD</label>
+            <div class="form-field__input-wrap">
+              <svg class="form-field__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="10" height="7" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              </svg>
+              <input class="form-field__input form-field__input--with-icon" type="password" id="signup-password" placeholder="Min. 6 characters" autocomplete="new-password" required minlength="6">
+            </div>
+            <span class="form-field__hint">At least 6 characters</span>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="signup-confirm">CONFIRM PASSWORD</label>
+            <div class="form-field__input-wrap">
+              <svg class="form-field__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="3" y="7" width="10" height="7" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <path d="M6.5 11l1.5 1.5 2.5-3" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              </svg>
+              <input class="form-field__input form-field__input--with-icon" type="password" id="signup-confirm" placeholder="Re-enter password" autocomplete="new-password" required minlength="6">
+            </div>
+            <span class="form-field__error" role="alert"></span>
+          </div>
+
+          <div class="form-field__global-error" id="signup-global-error" role="alert"></div>
+
+          <button class="btn btn--primary btn--lg btn--full" type="submit">
+            <span class="btn__text">Create Account</span>
+            <span class="btn__loader" aria-hidden="true">
+              <span class="dot-pulse"></span>
+            </span>
+          </button>
+        </form>
+      </div>
+
+      <p class="auth-page__footer-text">
+        Secure. Local. No data leaves your browser.
+      </p>
+    </div>
+  </main>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script type="module" src="assets/js/pages/auth-page.js"></script>
+</body>
+</html>
