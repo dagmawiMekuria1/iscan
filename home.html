@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAGSCAN — Dashboard</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/globals.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+    <div class="nav-bar__inner">
+      <a href="home.html" class="nav-bar__brand" aria-label="TAGSCAN home">
+        <svg class="nav-bar__logo-icon" width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="4" y="8" width="40" height="32" rx="4" stroke="#00ff88" stroke-width="2.5" fill="none"/>
+          <circle cx="24" cy="24" r="8" stroke="#00ff88" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="24" r="3" fill="#00ff88"/>
+        </svg>
+        <span class="nav-bar__wordmark">TAGSCAN</span>
+      </a>
+      <div class="nav-bar__actions">
+        <span class="nav-bar__user-email" id="nav-user-email"></span>
+        <button class="btn btn--ghost btn--sm" id="btn-signout" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M6 2H4a2 2 0 00-2 2v8a2 2 0 002 2h2M10.5 11.5L14 8l-3.5-3.5M14 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Sign Out
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="page-shell">
+    <div class="home-page">
+      <!-- Hero Section -->
+      <div class="home-page__hero">
+        <div class="home-page__hero-glow"></div>
+        <div class="home-page__logo-large">
+          <svg width="80" height="80" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="4" y="8" width="40" height="32" rx="4" stroke="#00ff88" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="24" r="8" stroke="#00ff88" stroke-width="2" fill="none"/>
+            <circle cx="24" cy="24" r="3" fill="#00ff88"/>
+            <line x1="4" y1="14" x2="44" y2="14" stroke="#00ff88" stroke-width="1" opacity="0.4"/>
+            <circle cx="8" cy="11" r="1" fill="#00ff88" opacity="0.6"/>
+            <circle cx="12" cy="11" r="1" fill="#00ff88" opacity="0.6"/>
+            <circle cx="16" cy="11" r="1" fill="#00ff88" opacity="0.6"/>
+          </svg>
+        </div>
+        <h1 class="home-page__title">TAGSCAN</h1>
+        <p class="home-page__greeting" id="home-greeting">Welcome back</p>
+      </div>
+
+      <!-- Action Cards -->
+      <div class="home-page__actions">
+        <a href="capture.html" class="glass-card glass-card--interactive glass-card--accent home-action-card">
+          <div class="home-action-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="4" y="8" width="32" height="24" rx="4" stroke="#00ff88" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="6" stroke="#00ff88" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="2.5" fill="#00ff88"/>
+              <rect x="14" y="8" width="12" height="4" rx="2" stroke="#00ff88" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <h2 class="home-action-card__title">Start Capture</h2>
+          <p class="home-action-card__desc">Scan a device tag and let AI extract the details</p>
+          <span class="home-action-card__cta">
+            Begin
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+
+        <a href="inventory.html" class="glass-card glass-card--interactive home-action-card">
+          <div class="home-action-card__icon home-action-card__icon--secondary">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="6" y="6" width="28" height="28" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+              <line x1="6" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <line x1="6" y1="28" x2="34" y2="28" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <line x1="16" y1="14" x2="16" y2="34" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+              <line x1="26" y1="6" x2="26" y2="34" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            </svg>
+          </div>
+          <h2 class="home-action-card__title">View Inventory</h2>
+          <p class="home-action-card__desc">Search, edit, and manage all captured assets</p>
+          <span class="home-action-card__cta">
+            Open
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="home-page__stats">
+        <div class="stat-card">
+          <span class="stat-card__value" id="stat-total">0</span>
+          <span class="stat-card__label">TOTAL CAPTURES</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value" id="stat-today">0</span>
+          <span class="stat-card__label">TODAY</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value stat-card__value--mono" id="stat-last">—</span>
+          <span class="stat-card__label">LAST CAPTURE</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script type="module" src="assets/js/pages/home-page.js"></script>
+</body>
+</html>
